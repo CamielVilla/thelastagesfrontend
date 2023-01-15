@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import information from "../src/Assets/Spelinformatie.png"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <>
+      <div className="homepage">
+          <div className="header-container">
+      <header className='header'>
+          <h1>The Last Ages</h1>
+          <h2>a real time strategy board game</h2>
       </header>
-    </div>
-  );
+          </div>
+          <div className='form-container'>
+          <form onSubmit={console.log("hij doet het")}>
+              <h3>Leave your e-mail to pre-order a copy of The Last Ages (€59)</h3>
+              <input
+                  name="email-adres"
+                  type="email"
+                  placeholder="your e-mail address"
+                />
+              <button type="submit">send</button>
+          </form>
+          </div>
+          <div className="bottom-container">
+              <img src={information} alt="information-image" className="info-image" />
+          </div>
+      </div>
+      </>
+)
 }
 
 export default App;
