@@ -10,7 +10,7 @@ function App() {
     async function handleFormSubmit(data){
         console.log(data.email);
         try{
-            const response = await axios.post('44.212.23.95:8080/addemail',{
+            const response = await axios.post('https://thelastages.herokuapp.com/addemail',{
                 emailAddress: data.email,
                 })
             console.log(data.email)
