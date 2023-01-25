@@ -9,7 +9,8 @@
 }
 
 body{
-  background-image: url("../src/Assets/background.png");
+  /*background-image: url("../src/Assets/background.png");*/
+  background-color: red;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
