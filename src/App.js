@@ -7,16 +7,23 @@ import { useForm} from "react-hook-form";
 function App() {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const [addSucces, toggleAddSucces] = useState(false);
+    const [duplicate, toggleDuplicate] = useState(false);
+
     async function handleFormSubmit(data){
-        console.log(data.email);
         try{
-            const response = await axios.post('https://thelastages.herokuapp.com/addemail',{
+            const response = await axios.post("http://localhost:8080/addemail",{
                 emailAddress: data.email,
                 })
-            console.log(data.email)
-            toggleAddSucces(true)
-            const emailField = document.getElementById("email");
-            emailField.value = "";
+            if (response.data){
+                toggleDuplicate(false)
+                toggleAddSucces(true)
+                const emailField = document.getElementById("email");
+                emailField.value = "";
+                console.log(duplicate)
+            }else{
+                toggleAddSucces(false)
+                toggleDuplicate(true)
+            }
         }catch (data) {
              console.error(data)
         }
@@ -51,6 +58,8 @@ function App() {
               {errors.email && <p>{errors.email.message}</p>}
               <button type="submit">send</button>
               {addSucces && <p>Thank you for your interest in The Last Ages</p>}
+              {duplicate && <p>You already declared your interest!</p>}
+              {duplicate && <p>try a different e-mail address</p>}
           </form>
           </div>
           <div className="bottom-container">
