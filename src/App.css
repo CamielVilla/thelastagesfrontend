@@ -3,14 +3,18 @@
   src: url("../src/Fonts/ACRealAdult.otf");
 }
 
+@font-face {
+  font-family: "OpenSans";
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+}
+
 *{
   margin: 0;
   box-sizing: border-box;
 }
 
 body{
-  /*background-image: url("../src/Assets/background.png");*/
-  background-color: red;
+  background-image: url("../src/Assets/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -54,7 +58,7 @@ input {
   padding: 10px;
   background: none;
   color: white;
-  font-family: "Comic Sans MS";
+  font-family: "OpenSans";
   font-size: 20px;
   border-style: solid;
   border-color: white;

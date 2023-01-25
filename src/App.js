@@ -18,7 +18,7 @@ function App() {
             const emailField = document.getElementById("email");
             emailField.value = "";
         }catch (data) {
-            console.error(data)
+             console.error(data)
         }
     }
   return (
@@ -32,7 +32,7 @@ function App() {
           </div>
           <div className='form-container'>
           <form onSubmit={handleSubmit(handleFormSubmit)} >
-              <h3>Leave your e-mail to receive more information</h3>
+              <h3>Leave your e-mail to receive more information in the future</h3>
               <input
                   id="email"
                   type="email"
@@ -61,4 +61,9 @@ function App() {
 )
 }
 
+
+// - nog niet mooi in landscape modus van telefoon
+// - positie van die info onderin is verschillend op desktop en telefoon
+// - e-mail adres aanmaken
+// - bevestigingsemail versturen
 export default App;
