@@ -39,8 +39,8 @@ function App() {
           </div>
           <div className='form-container'>
           <form onSubmit={handleSubmit(handleFormSubmit)} >
-              <h3>Leave your e-mail to receive more information in the future</h3>
-              <input
+              {!addSucces && <h3>Leave your e-mail to receive more information in the future</h3>}
+              {!addSucces && <input
                   id="email"
                   type="email"
                   placeholder="your e-mail address"
@@ -54,12 +54,12 @@ function App() {
                               message: "max length is 50 characters",
                           }
                       })}
-                />
+                />}
               {errors.email && <p>{errors.email.message}</p>}
-              <button type="submit">send</button>
+              {!addSucces && <button type="submit">send</button>}
               {addSucces && <p>Thank you for your interest in The Last Ages</p>}
               {duplicate && <p>You already declared your interest!</p>}
-              {duplicate && <p>try a different e-mail address</p>}
+              {duplicate && <p>try a different e-mail address.</p>}
           </form>
           </div>
           <div className="bottom-container">
