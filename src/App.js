@@ -58,13 +58,11 @@ function App() {
               {errors.email && <p>{errors.email.message}</p>}
               {!addSucces && <button type="submit">send</button>}
               {addSucces && <p>Thank you for your interest in The Last Ages</p>}
-              {duplicate && <p>You already declared your interest!</p>}
-              {duplicate && <p>try a different e-mail address.</p>}
+              {duplicate && <h4>You already declared your interest!</h4>}
+              {duplicate && <h4>try a different e-mail address.</h4>}
           </form>
           </div>
-          <div className="bottom-container">
-              <img src={information} alt="information-image" className="info-image" />
-          </div>
+              <img src={information} className="info-image" />
       </div>
       </>
 )
