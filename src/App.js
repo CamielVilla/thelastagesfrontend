@@ -1,36 +1,46 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './App.css';
 import information from "../src/Assets/Spelinformatie.png"
 import axios from "axios";
-import { useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 function App() {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const [addSucces, toggleAddSucces] = useState(false);
     const [duplicate, toggleDuplicate] = useState(false);
+    const [loading, setLoading] = useState(false);
+
 
     async function handleFormSubmit(data){
         try{
+            setLoading(true);
             const response = await axios.post("https://thelastages.herokuapp.com/addemail",{
                 emailAddress: data.email,
                 })
+
             if (response.data){
-                toggleDuplicate(false)
-                toggleAddSucces(true)
+                toggleDuplicate(false);
+                toggleAddSucces(true);
                 const emailField = document.getElementById("email");
                 emailField.value = "";
-                console.log(duplicate)
+                setLoading(false);
             }else{
-                toggleAddSucces(false)
-                toggleDuplicate(true)
+                toggleAddSucces(false);
+                toggleDuplicate(true);
+                setLoading(false);
             }
         }catch (data) {
-             console.error(data)
+            console.error(data);
+            setLoading(false);
         }
     }
   return (
-      <>
-      <div className="homepage">
+      <>{loading ?
+          <div className="loader-container">
+              <div className="spinner"></div>
+          </div> :
+          <div className="homepage">
+
           <div className="header-container">
       <header className='header'>
           <h1>The Last Ages</h1>
@@ -58,12 +68,15 @@ function App() {
               {errors.email && <p>{errors.email.message}</p>}
               {!addSucces && <button type="submit">send</button>}
               {addSucces && <p>Thank you for your interest in The Last Ages</p>}
+              {addSucces && <p className='confirmation'>A confirmation mail has been sent to your e-mail address</p>}
               {duplicate && <h4>You already declared your interest!</h4>}
               {duplicate && <h4>try a different e-mail address.</h4>}
           </form>
           </div>
+          <div className="info-image-container">
               <img src={information} className="info-image" />
-      </div>
+          </div>
+      </div>}
       </>
 )
 }
