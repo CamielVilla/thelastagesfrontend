@@ -8,6 +8,8 @@
   src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -19,7 +21,7 @@ body{
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  font-family: "lastAges", "Comic Sans MS", sans-serif;
+  font-family: "Rock Salt", "Comic Sans MS", sans-serif;
   text-align: center;
   color: white;
 }
@@ -59,7 +61,7 @@ form{
 }
 
 form p{
-  font-size: 50px;
+  font-size: 15px;
 }
 
 input {
@@ -67,7 +69,7 @@ input {
   padding: 10px;
   background: none;
   color: white;
-  font-family: OpenSans;
+  /*font-family: OpenSans;*/
   font-size: 20px;
   border-style: solid;
   border-color: white;
@@ -98,44 +100,34 @@ button {
 }
 
 h1{
-  font-size: 200px;
+  font-size: 80px;
 font-weight: initial;
 }
 
 h2{
-  font-size: 50px;
+  font-size: 30px;
   font-weight: lighter;
 }
 
 h3{
-  font-size: 30px;
+  font-size: 15px;
   font-weight: lighter;
   padding-bottom: 10px;
 }
 
 p{
-  font-size: 30px;
+  /*font-size: 15px;*/
   color: #00ff00;
 }
 
 .confirmation{
-  font-size: 25px;
+  font-size: 15px;
 }
 
 h4{
-  font-size: 50px;
+  font-size: 20px;
   color: #ff0000;
 }
-
-/*.loader-container {*/
-/*  width: 100%;*/
-/*  height: 100vh;*/
-/*  position: fixed;*/
-/*  background: rgba(0, 0, 0, 0.834)*/
-/*  url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center*/
-/*  no-repeat;*/
-/*  z-index: 1;*/
-/*}*/
 
 .loader-container {
   width: 100%;
@@ -167,24 +159,77 @@ h4{
 }
 
 
-@media (min-width: 100px) and (max-width: 1024px) {
-body{
-  height: 1024px;
-}
-
+@media (min-width: 100px) and (max-width: 600px) {
   .bottom-container{
     padding-bottom: 5px;
   }
 
   h1{
-    font-size: 50px;
+    font-size: 20px;
   }
 
   h2 {
-    font-size: 35px;
+    font-size: 15px;
   }
   h3{
-    font-size: 28px;
+    font-size: 15px;
   }
 
+  .confirmation{
+    font-size: 15px;
+  }
+
+  h4{
+    font-size: 15px;
+  }
+
+  p{
+    font-size: 100px;
+  }
+
+  .header-container{
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px){
+  .bottom-container{
+    padding-bottom: 5px;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+  h3{
+    font-size: 10px;
+  }
+
+  .confirmation{
+    font-size: 10px;
+  }
+
+  h4{
+    font-size: 10px;
+  }
+
+  .header-container{
+    margin-bottom: 10px;
+  }
+
+  .info-image{
+    height: 20px;
+  }
+
+  input {
+    width: 70%;
+    padding: 5px;
+    background: none;
+    color: white;
+    /*font-family: OpenSans;*/
+    font-size: 10px;
+  }
 }
