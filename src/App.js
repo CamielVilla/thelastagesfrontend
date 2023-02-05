@@ -67,8 +67,8 @@ function App() {
                 />}
               {errors.email && <p>{errors.email.message}</p>}
               {!addSucces && <button type="submit">send</button>}
-              {addSucces && <p>Thank you for your interest in The Last Ages</p>}
-              {addSucces && <p className='confirmation'>A confirmation mail has been sent to your e-mail address</p>}
+              {addSucces && <p className='thanks'>Thank you for your interest in The Last Ages.</p>}
+              {addSucces && <p className='confirmation'>A confirmation mail has been sent to your e-mail address.</p>}
               {duplicate && <h4>You already declared your interest!</h4>}
               {duplicate && <h4>try a different e-mail address.</h4>}
           </form>
