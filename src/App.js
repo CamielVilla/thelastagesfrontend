@@ -4,6 +4,24 @@ import information from "../src/Assets/Spelinformatie.png"
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import ActionBoardPage from "./Pages/ActionBoardPage/ActionBoardPage";
+import Page from "./Pages/Page/Page";
+import actionBoard from "./Assets/actionboard.png";
+import mountains from "./Assets/mountains.png";
+import yellow from "./Assets/arab_yellow.png";
+import woman from "./Assets/arab_woman.png";
+import white from "./Assets/arab_white.png";
+import green from "./Assets/arab_green_2.png";
+import greenWoman from "./Assets/arab_green.png";
+import elfLord from "./Assets/elf_warlord.png";
+import earth from "./Assets/earth.png"
+import purple from "./Assets/arab_purple_2.png"
+import camiel from "./Assets/Camiel.png";
+import ruben from "./Assets/Ruben (1).png";
+import jasper from "./Assets/jasper.jpeg";
+import yuri from "./Assets/Yuri.jpeg";
+
+
+
 
 function App() {
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -78,7 +96,57 @@ function App() {
               </div>
           </div>
       </div>}
-          <ActionBoardPage />
+          <Page
+          backgroundTitle="background-actionboard"
+          outer="outer-actionboard"
+          inner="inner-actionboard"
+          >
+              <div className='action-board-text'>
+                  <h2>Experience the dynamics of real-time strategy in the comfort of your own home</h2>
+                  <h3>Plan your builds & blitz moves in secret and outmaneuver your enemies</h3>
+              </div>
+              <img className="action-board" src={actionBoard}/>
+          </Page>
+         <Page
+          backgroundTitle="background-tribes"
+          outer="outer-tribes"
+          inner="inner-tribes"
+          >
+             <div className="img-container">
+             <img src={mountains}/>
+             <img src={yellow}/>
+             <img src={woman}/>
+             <img src={white}/>
+             <img src={green}/>
+             <img src={greenWoman}/>
+             <img src={elfLord}/>
+             <img src={earth}/>
+             <img src={purple}/>
+             </div>
+             <div className="tribes-text">
+                 <h2>In a 25th-century flooded world, there is only room for one tribe</h2>
+                 <h3>So take up your weapons and defeat the others!</h3>
+             </div>
+         </Page>
+          <Page
+              backgroundTitle="background-team"
+              outer="outer-team"
+              inner="inner-team"
+          >
+              <div className='team-text'>
+                  <h2>our team is working very hard to complete the first batch</h2>
+                  <h3>Sign up and be the first to pre-order!</h3>
+              </div>
+              <div className="team-images">
+              <img src={camiel}/>
+                  <img src={ruben}/>
+                  <img src={jasper}/>
+                  <img src={yuri}/>
+              </div>
+          </Page>
+          <Page>
+
+          </Page>
       </>
 )
 }

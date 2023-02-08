@@ -39,8 +39,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-style: groove;
-  border-color: green;
+
 }
 .header-container{
   display: flex;
@@ -159,6 +158,33 @@ h4{
   border-color: #3d5af1 transparent #3d5af1 transparent;
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
+}
+.img-container, .team-images{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 791px;
+  align-content: flex-start;
+  gap: 0;
+}
+
+.team-images {
+  flex-basis: 599px;
+  height: 500px;
+  justify-content: center;
+}
+
+.team-images img{
+  padding: 10px;
+}
+
+img{
+  height: 200px;
+}
+
+
+.tribes-text{
+  color: black;
 }
 
 @keyframes spin-anim {
