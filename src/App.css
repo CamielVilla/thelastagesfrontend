@@ -16,19 +16,31 @@
 }
 
 body{
-  background-image: url("../src/Assets/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+
   font-family: "Rock Salt", "Comic Sans MS", sans-serif;
   text-align: center;
   color: white;
 }
+
+/*.homepage-container{*/
+/*  background-color: red;*/
+
+/*  border-style: groove;*/
+/*  border-color: red;*/
+/*}*/
+
 .homepage{
+  background-image: url("../src/Assets/background.jpg");
+  background-size: cover;
+  height: 1200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-style: groove;
+  border-color: green;
 }
 .header-container{
   display: flex;

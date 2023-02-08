@@ -1,0 +1,17 @@
+.action-board{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+}
+
+.action-board-text{
+    background-image: url("../../Assets/sauron.png");
+    opacity: 50%;
+    background-size: cover;
+    height: 1200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+}

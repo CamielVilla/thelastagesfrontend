@@ -3,6 +3,7 @@ import './App.css';
 import information from "../src/Assets/Spelinformatie.png"
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import ActionBoardPage from "./Pages/ActionBoardPage/ActionBoardPage";
 
 function App() {
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -35,12 +36,12 @@ function App() {
         }
     }
   return (
-      <>{loading ?
+      <>
+          {loading ?
           <div className="loader-container">
               <div className="spinner"></div>
           </div> :
           <div className="homepage">
-
           <div className="header-container">
       <header className='header'>
           <h1>The Last Ages</h1>
@@ -72,11 +73,12 @@ function App() {
               {duplicate && <h4>You already declared your interest!</h4>}
               {duplicate && <h4>try a different e-mail address.</h4>}
           </form>
-          </div>
-          <div className="info-image-container">
-              <img src={information} className="info-image" />
+              <div className="info-image-container">
+                  <img src={information} className="info-image" />
+              </div>
           </div>
       </div>}
+          <ActionBoardPage />
       </>
 )
 }
