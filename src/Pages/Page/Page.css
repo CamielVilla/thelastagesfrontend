@@ -1,0 +1,59 @@
+.background-actionboard, .background-tribes, .background-team{
+    background-image: url("../../Assets/sauron.png");
+    background-size: cover;
+    height: 1200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+}
+
+.background-tribes{
+    background-image: url("../../Assets/background-tribes.png");
+}
+
+.background-team{
+    background-image: url("../../Assets/male_female.png");
+}
+
+.outer-actionboard, .outer-tribes, .outer-team{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.outer-tribes{
+    background:rgba(255, 255, 255, 0.4);
+}
+
+.inner-actionboard, .inner-tribes, .inner-team{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    justify-content: space-around;
+    align-items:center;
+    flex-basis: 1400px;
+}
+
+
+.action-board-text h2{
+    font-size: 28px;
+}
+
+.action-board-text h3{
+    font-size: 17px;
+    color: lightblue;
+}
+
+
+/*.inner h2{*/
+/*    font-size: 28px;*/
+/*}*/
+
+/*.inner h3{*/
+/*    font-size: 17px;*/
+/*    color: lightblue;*/
+/*}*/
