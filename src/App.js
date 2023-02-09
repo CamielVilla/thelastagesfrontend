@@ -3,7 +3,6 @@ import './App.css';
 import information from "../src/Assets/Spelinformatie.png"
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import ActionBoardPage from "./Pages/ActionBoardPage/ActionBoardPage";
 import Page from "./Pages/Page/Page";
 import actionBoard from "./Assets/actionboard.png";
 import mountains from "./Assets/mountains.png";
@@ -15,10 +14,10 @@ import greenWoman from "./Assets/arab_green.png";
 import elfLord from "./Assets/elf_warlord.png";
 import earth from "./Assets/earth.png"
 import purple from "./Assets/arab_purple_2.png"
-import camiel from "./Assets/Camiel.png";
-import ruben from "./Assets/Ruben (1).png";
-import jasper from "./Assets/jasper.jpeg";
-import yuri from "./Assets/Yuri.jpeg";
+import camiel from "./Assets/camiel-nieuw.png";
+import ruben from "./Assets/ruben-nieuw.png";
+import jasper from "./Assets/jasper-nieuw.png";
+import yuri from "./Assets/yuri-nieuw.png";
 
 
 
@@ -102,10 +101,12 @@ function App() {
           inner="inner-actionboard"
           >
               <div className='action-board-text'>
-                  <h2>Experience the dynamics of real-time strategy in the comfort of your own home</h2>
+                  <h2>Experience the dynamics of real-time strategy in a board game</h2>
                   <h3>Plan your builds & blitz moves in secret and outmaneuver your enemies</h3>
               </div>
+              <div className="action-board-img-container">
               <img className="action-board" src={actionBoard}/>
+              </div>
           </Page>
          <Page
           backgroundTitle="background-tribes"
@@ -145,8 +146,8 @@ function App() {
               </div>
           </Page>
           <Page>
-
           </Page>
+
       </>
 )
 }
