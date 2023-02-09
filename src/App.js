@@ -54,10 +54,12 @@ function App() {
     }
   return (
       <>
+
           {loading ?
           <div className="loader-container">
               <div className="spinner"></div>
           </div> :
+              <section>
           <div className="homepage">
           <div className="header-container">
       <header className='header'>
@@ -90,22 +92,25 @@ function App() {
               {duplicate && <h4>You already declared your interest!</h4>}
               {duplicate && <h4>try a different e-mail address.</h4>}
           </form>
-              <div className="info-image-container">
-                  <img src={information} className="info-image" />
-              </div>
           </div>
-      </div>}
+              {/*<div className="info-image-container">*/}
+              {/*    <img src={information} className="info-image" />*/}
+              {/*</div>*/}
+      </div>
+
           <Page
           backgroundTitle="background-actionboard"
           outer="outer-actionboard"
           inner="inner-actionboard"
           >
+              <div className="inner-action">
               <div className='action-board-text'>
                   <h2>Experience the dynamics of real-time strategy in a board game</h2>
                   <h3>Plan your builds & blitz moves in secret and outmaneuver your enemies</h3>
               </div>
-              <div className="action-board-img-container">
+                  <div className="board-img">
               <img className="action-board" src={actionBoard}/>
+              </div>
               </div>
           </Page>
          <Page
@@ -113,6 +118,7 @@ function App() {
           outer="outer-tribes"
           inner="inner-tribes"
           >
+             <div className="inner-tribe">
              <div className="img-container">
              <img src={mountains}/>
              <img src={yellow}/>
@@ -128,15 +134,17 @@ function App() {
                  <h2>In a 25th-century flooded world, there is only room for one tribe</h2>
                  <h3>So take up your weapons and defeat the others!</h3>
              </div>
+             </div>
          </Page>
           <Page
               backgroundTitle="background-team"
               outer="outer-team"
               inner="inner-team"
           >
+              <div className="inner-teams">
               <div className='team-text'>
                   <h2>our team is working very hard to complete the first batch</h2>
-                  <h3>Sign up and be the first to pre-order!</h3>
+                  <h3><a href="#top">Sign up</a> and be the first to pre-order!</h3>
               </div>
               <div className="team-images">
               <img src={camiel}/>
@@ -144,10 +152,11 @@ function App() {
                   <img src={jasper}/>
                   <img src={yuri}/>
               </div>
+              </div>
           </Page>
           <Page>
           </Page>
-
+          </section>}
       </>
 )
 }

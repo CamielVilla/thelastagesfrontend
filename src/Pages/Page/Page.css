@@ -30,24 +30,24 @@
     background:rgba(255, 255, 255, 0.4);
 }
 
-.inner-actionboard, .inner-tribes, .inner-team{
+.inner-tribe, .inner-teams, .inner-action{
     display: flex;
     flex-direction: row;
     flex-shrink: 1;
     justify-content: space-around;
     align-items:center;
-    flex-basis: 1400px;
+    width: 1400px;
 }
+
 
 .action-board-text, .tribes-text, .team-text{
     width: 600px;
 }
 
-.img-container, .team-images. .action-board-img-container{
+.img-container, .team-images. .board-image{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: 791px;
     align-content: flex-start;
     gap: 0;
 }
@@ -61,7 +61,7 @@
     gap: 0;
 
 }
-.team-images, .action-board-img-container {
+.team-images {
     flex-basis: 599px;
     height: 500px;
     justify-content: center;
@@ -75,42 +75,53 @@ img{
     height: 200px;
 }
 
-@media (min-width: 100px) and (max-width: 600px) {
+@media (min-width: 100px) and (max-width: 1400px) {
 
     .background-actionboard, .background-tribes, .background-team{
         height: 600px;
     }
 
     .outer-actionboard, .outer-tribes, .outer-team{
-        border-style: groove;
-        border-color: green;
+
         border-width: 10px;
         height: 600px;
-    }
-
-    .inner-actionboard, .inner-tribes, .inner-team{
-        border-color: red;
-        border-width: 10px;
-        /*height: 600px;*/
+        display: flex;
+        flex-direction: column;
     }
 
     .action-board-text, .tribes-text, .team-text{
-        border-style: groove;
-        border-color: red;
-        border-width: 10px;
         width: 200px;
-        /*padding: 50px;*/
+
+    }
+
+    .inner-action, .inner-tribe, .inner-teams{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 550px;
     }
 
     .img-container, .team-images{
-
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 200px;
+        align-content: flex-start;
+        gap: 0;
+        width: 243px;
     }
     img{
-        height: 100px;
+        height: 80px;
+    }
+
+    .team-images img{
+        height: 110px;
     }
 
     .action-board{
-        height: 100px;
+        height: 300px;
     }
 }
 
