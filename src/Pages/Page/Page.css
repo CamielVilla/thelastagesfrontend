@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
+    flex-shrink: 1;
 }
 
 .background-tribes{
@@ -29,31 +30,99 @@
     background:rgba(255, 255, 255, 0.4);
 }
 
-.inner-actionboard, .inner-tribes, .inner-team{
+.inner-tribe, .inner-teams, .inner-action{
     display: flex;
     flex-direction: row;
     flex-shrink: 1;
     justify-content: space-around;
     align-items:center;
-    flex-basis: 1400px;
+    width: 1400px;
 }
 
 
-.action-board-text h2{
-    font-size: 28px;
+.action-board-text, .tribes-text, .team-text{
+    width: 600px;
 }
 
-.action-board-text h3{
-    font-size: 17px;
-    color: lightblue;
+.img-container, .team-images. .board-image{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0;
+}
+
+.img-container, .team-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 791px;
+    align-content: flex-start;
+    gap: 0;
+
+}
+.team-images {
+    flex-basis: 599px;
+    height: 500px;
+    justify-content: center;
+}
+
+.team-images img{
+    padding: 10px;
+}
+
+img{
+    height: 200px;
+}
+
+@media (min-width: 100px) and (max-width: 1400px) {
+
+    .background-actionboard, .background-tribes, .background-team{
+        height: 600px;
+    }
+
+    .outer-actionboard, .outer-tribes, .outer-team{
+
+        border-width: 10px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .action-board-text, .tribes-text, .team-text{
+        width: 200px;
+
+    }
+
+    .inner-action, .inner-tribe, .inner-teams{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 550px;
+    }
+
+    .img-container, .team-images{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 200px;
+        align-content: flex-start;
+        gap: 0;
+        width: 243px;
+    }
+    img{
+        height: 80px;
+    }
+
+    .team-images img{
+        height: 110px;
+    }
+
+    .action-board{
+        height: 300px;
+    }
 }
 
 
-/*.inner h2{*/
-/*    font-size: 28px;*/
-/*}*/
-
-/*.inner h3{*/
-/*    font-size: 17px;*/
-/*    color: lightblue;*/
-/*}*/

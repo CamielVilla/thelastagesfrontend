@@ -10,6 +10,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -17,7 +19,7 @@
 
 body{
 
-  font-family: "Rock Salt", "Comic Sans MS", sans-serif;
+  font-family: "Bebas Neue", "Comic Sans MS", sans-serif;
   text-align: center;
   color: white;
 }
@@ -56,6 +58,17 @@ body{
   align-items: center;
 }
 
+.header h1, .header h2{
+  font-family: "Rock Salt", "Bebas Neue", "Comic Sans MS";
+  font-size: 80px;
+  font-weight: initial;
+}
+
+.header h2{
+  font-size: 30px;
+  font-weight: lighter;
+
+}
 
 .form-container {
   display: flex;
@@ -71,9 +84,10 @@ form{
   margin: 15px;
 }
 
-form p{
-  font-size: 15px;
-}
+/*form p{*/
+/*  font-family: "Bebas Neue", "Comic Sans MS";*/
+/*  font-size: 15px;*/
+/*}*/
 
 input {
   width: 90%;
@@ -96,14 +110,17 @@ button {
   height: 35px;
   width: 110px;
   margin-top: 10px;
-  font-family: lastAges;
-  font-size: 30px;
+  font-family: "Bebas Neue", "Comic Sans MS";
+  font-size: 20px;
   text-decoration: underline;
 }
 
 .info-image-container {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
+
+  /*position: absolute;*/
+  /*bottom: 5px;*/
 }
 
 .info-image{
@@ -111,33 +128,53 @@ button {
 }
 
 h1{
-  font-size: 80px;
-font-weight: initial;
+
 }
 
 h2{
-  font-size: 30px;
-  font-weight: lighter;
+font-size: 40px ;
 }
 
 h3{
-  font-size: 15px;
+  font-size: 40px ;
+  font-size: 25px;
   font-weight: lighter;
   padding-bottom: 10px;
 }
 
+.action-board-text h3, .team-text h3{
+  color: lightblue;
+}
+
+.tribes-text{
+  color: black;
+}
+
+.tribes-text h3{
+  color: white;
+}
+
+.action-board{
+  height: 700px;
+}
 p{
-  /*font-size: 15px;*/
+  font-size: 25px;
   color: #00ff00;
 }
 
 .confirmation{
-  font-size: 15px;
+  font-size: 20px;
+  color: white;
 }
 
 h4{
   font-size: 20px;
   color: #ff0000;
+}
+
+a{
+  text-decoration: none;
+  color: red;
 }
 
 .loader-container {
@@ -159,33 +196,10 @@ h4{
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
 }
-.img-container, .team-images{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-basis: 791px;
-  align-content: flex-start;
-  gap: 0;
-}
-
-.team-images {
-  flex-basis: 599px;
-  height: 500px;
-  justify-content: center;
-}
-
-.team-images img{
-  padding: 10px;
-}
-
-img{
-  height: 200px;
-}
 
 
-.tribes-text{
-  color: black;
-}
+
+
 
 @keyframes spin-anim {
   0% {
@@ -197,7 +211,25 @@ img{
 }
 
 
-@media (min-width: 100px) and (max-width: 600px) {
+@media (min-width: 100px) and (max-width: 1400px) {
+
+  .homepage{
+    height: 650px;
+  }
+  .header-container {
+
+  }
+
+  .header-container{
+
+  }
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .header h2{
+    font-size: 15px;
+  }
   .bottom-container{
     padding-bottom: 5px;
   }
@@ -225,49 +257,19 @@ img{
     font-size: 100px;
   }
 
+
   .header-container{
     margin-bottom: 50px;
   }
-}
-
-@media (min-width: 600px) and (max-width: 1024px){
-  .bottom-container{
-    padding-bottom: 5px;
-  }
-
-  h1{
-    font-size: 20px;
-  }
-
-  h2 {
-    font-size: 15px;
-  }
-  h3{
-    font-size: 10px;
-  }
-
-  .confirmation{
-    font-size: 10px;
-  }
-
-  h4{
-    font-size: 10px;
-  }
-
-  .header-container{
-    margin-bottom: 10px;
-  }
-
-  .info-image{
+  .info-image-container{
+   opacity: 0%;
+    bottom: 0px;
     height: 20px;
   }
 
-  input {
-    width: 70%;
-    padding: 5px;
-    background: none;
-    color: white;
-    /*font-family: OpenSans;*/
-    font-size: 10px;
+  form{
+    margin-top: 50px;
   }
 }
+
+
