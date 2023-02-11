@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import './App.css';
 import information from "../src/Assets/Spelinformatie.png"
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Page from "./Pages/Page/Page";
-import actionBoard from "./Assets/actionboard.png";
+import actionBoard from "./Assets/playboard.png";
 import mountains from "./Assets/mountains.png";
 import yellow from "./Assets/arab_yellow.png";
 import woman from "./Assets/arab_woman.png";
@@ -93,9 +93,9 @@ function App() {
               {duplicate && <h4>try a different e-mail address.</h4>}
           </form>
           </div>
-              {/*<div className="info-image-container">*/}
-              {/*    <img src={information} className="info-image" />*/}
-              {/*</div>*/}
+              <div className="info-image-container">
+                  <img src={information} className="info-image" />
+              </div>
       </div>
 
           <Page
