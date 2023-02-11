@@ -6,6 +6,8 @@
     background-position: center center;
     background-attachment: scroll;
     flex-shrink: 1;
+    width:100%;
+    overflow-x:hidden;
 }
 
 .background-tribes{
@@ -62,13 +64,17 @@
 
 }
 .team-images {
-    flex-basis: 599px;
-    height: 500px;
+    flex-basis: 624px;
     justify-content: center;
 }
 
 .team-images img{
     padding: 10px;
+    height: 300px;
+}
+
+.action-board{
+    height: 600px;
 }
 
 img{
@@ -82,7 +88,6 @@ img{
     }
 
     .outer-actionboard, .outer-tribes, .outer-team{
-
         border-width: 10px;
         height: 600px;
         display: flex;
@@ -115,13 +120,16 @@ img{
     img{
         height: 80px;
     }
+    .team-images {
+        width: 250px;
+    }
 
     .team-images img{
-        height: 110px;
+        height: 120px;
     }
 
     .action-board{
-        height: 300px;
+        height: 250px;
     }
 }
 
