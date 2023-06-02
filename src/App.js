@@ -18,6 +18,7 @@ import camiel from "./Assets/camiel-nieuw.png";
 import ruben from "./Assets/ruben-nieuw.png";
 import jasper from "./Assets/jasper-nieuw.png";
 import yuri from "./Assets/yuri-nieuw.png";
+import YoutubeVideo from "./Components/YoutubeVideo/YoutubeVideo";
 
 
 
@@ -97,7 +98,19 @@ function App() {
                   <img src={information} className="info-image" />
               </div>
       </div>
+                  <Page
+                      backgroundTitle="background-promovideo"
+                      outer="outer-promovideo"
+                      inner="inner-promovideo">
+                      <div className="inner-video">
+                          <YoutubeVideo embedId="y3D7u3qWW_I"/>
+                          <div className="video-text">
+                              <h2>Get an impression of the gameplay</h2>
+                              <h3>By checking our promotional video</h3>
+                          </div>
+                      </div>
 
+                  </Page>
           <Page
           backgroundTitle="background-actionboard"
           outer="outer-actionboard"

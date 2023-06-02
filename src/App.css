@@ -146,11 +146,11 @@ h3{
   color: lightblue;
 }
 
-.tribes-text{
+.tribes-text, .video-text{
   color: black;
 }
 
-.tribes-text h3{
+.tribes-text h3, .video-text h3{
   color: white;
 }
 
