@@ -70,7 +70,7 @@ function App() {
           </div>
           <div className='form-container'>
           <form onSubmit={handleSubmit(handleFormSubmit)} >
-              {!addSucces && <h3>Leave your e-mail to receive more information in the future</h3>}
+              {!addSucces && <h3>Leave your email to stay updated about pre-orders and our kickstarter campaign</h3>}
               {!addSucces && <input
                   id="email"
                   type="email"
@@ -144,8 +144,8 @@ function App() {
              <img src={purple}/>
              </div>
              <div className="tribes-text">
-                 <h2>In a 25th-century flooded world, there is only room for one tribe</h2>
-                 <h3>So take up your weapons and defeat the others!</h3>
+                 <h2>In a 25th-century flooded world, there is not enough room for all tribes</h2>
+                 <h3>So take up your weapons and protect your resources!</h3>
              </div>
              </div>
          </Page>
