@@ -69,30 +69,31 @@ function App() {
       </header>
           </div>
           <div className='form-container'>
-          <form onSubmit={handleSubmit(handleFormSubmit)} >
-              {!addSucces && <h3>Leave your email to stay updated about pre-orders and our kickstarter campaign</h3>}
-              {!addSucces && <input
-                  id="email"
-                  type="email"
-                  placeholder="your e-mail address"
-                  {...register("email",
-                      {required: {
-                          value: true,
-                              message: 'enter an e-mail address',
-                          },
-                          maxLength: {
-                          value: 50,
-                              message: "max length is 50 characters",
-                          }
-                      })}
-                />}
-              {errors.email && <p>{errors.email.message}</p>}
-              {!addSucces && <button type="submit">send</button>}
-              {addSucces && <p className='thanks'>Thank you for your interest in The Last Ages.</p>}
-              {addSucces && <p className='confirmation'>A confirmation mail has been sent to your e-mail address.</p>}
-              {duplicate && <h4>You already declared your interest!</h4>}
-              {duplicate && <h4>try a different e-mail address.</h4>}
-          </form>
+          {/*<form onSubmit={handleSubmit(handleFormSubmit)} >*/}
+          {/*    {!addSucces && <h3>Leave your email to stay updated about pre-orders and our kickstarter campaign</h3>}*/}
+          {/*    {!addSucces && <input*/}
+          {/*        id="email"*/}
+          {/*        type="email"*/}
+          {/*        placeholder="your e-mail address"*/}
+          {/*        {...register("email",*/}
+          {/*            {required: {*/}
+          {/*                value: true,*/}
+          {/*                    message: 'enter an e-mail address',*/}
+          {/*                },*/}
+          {/*                maxLength: {*/}
+          {/*                value: 50,*/}
+          {/*                    message: "max length is 50 characters",*/}
+          {/*                }*/}
+          {/*            })}*/}
+          {/*      />}*/}
+          {/*    {errors.email && <p>{errors.email.message}</p>}*/}
+          {/*    {!addSucces && <button type="submit">send</button>}*/}
+          {/*    {addSucces && <p className='thanks'>Thank you for your interest in The Last Ages.</p>}*/}
+          {/*    {addSucces && <p className='confirmation'>A confirmation mail has been sent to your e-mail address.</p>}*/}
+          {/*    {duplicate && <h4>You already declared your interest!</h4>}*/}
+          {/*    {duplicate && <h4>try a different e-mail address.</h4>}*/}
+          {/*</form>*/}
+              <h3>Send an email to thelastages@gmail.com if you want to stay updated about pre-orders and our kickstarter campaign </h3>
           </div>
               <div className="info-image-container">
                   <img src={information} className="info-image" />
