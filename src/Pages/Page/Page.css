@@ -1,6 +1,17 @@
 .background-actionboard, .background-tribes, .background-team, .background-promovideo{
     background-image: url("../../Assets/sauron.png");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    flex-shrink: 1;
+    width:100%;
+    overflow-x:hidden;
+}
+
+.background-privacy {
+    background-image: url("../../Assets/sauron.png");
+    background-size: cover;
     height: 1200px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -24,7 +35,7 @@
 
 
 
-.outer-actionboard, .outer-tribes, .outer-team, .outer-promovideo{
+.outer-actionboard, .outer-tribes, .outer-team, .outer-promovideo, .outer-privacy{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -85,6 +96,29 @@
 
 img{
     height: 200px;
+}
+
+.outer-privacy {
+    padding: 20px;
+}
+
+.inner-privacy h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inner-privacy h3 {
+    font-size: 20px;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+.inner-privacy p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 @media (min-width: 100px) and (max-width: 1400px) {

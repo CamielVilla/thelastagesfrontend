@@ -272,6 +272,11 @@ a{
   form{
     margin-top: 50px;
   }
+
+  .inner-privacy h2{
+    font-size: 10px;
+    background-color: red;
+  }
 }
 
 
