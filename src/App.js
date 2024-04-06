@@ -11,7 +11,7 @@ const router = createBrowserRouter([
         element: <MainSite />,
     },
     {
-        path: 'privacy',
+        path: '/privacy',
         element: <Privacy />,
     },
 ]);

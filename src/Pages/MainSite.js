@@ -155,7 +155,7 @@ function MainSite(){
                         <div className="inner-teams">
                             <div className='team-text'>
                                 <h2>our team is working very hard to complete the first batch</h2>
-                                <h3><a href="#top">Sign up</a> and be the first to pre-order!</h3>
+                                <h3><a href="#top"> Sign up</a> and be the first to pre-order!</h3>
                             </div>
                             <div className="team-images">
                                 <img src={camiel}/>
