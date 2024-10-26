@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import './App.css';
-import {BrowserRouter, Route, Router, Routes} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, Router, Routes} from 'react-router-dom';
 import MainSite from "./Pages/MainSite";
 import Privacy from "./Pages/Privacy";
 import Navbar from "./Components/header/Navbar";
@@ -9,7 +9,7 @@ import Navbar from "./Components/header/Navbar";
 
 function App() {
     return (
-        <BrowserRouter >
+        <HashRouter >
             <Navbar />
             <main>
                 <Routes>
@@ -17,7 +17,7 @@ function App() {
                     <Route path="/privacy" element={<Privacy />} />
                 </Routes>
             </main>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
