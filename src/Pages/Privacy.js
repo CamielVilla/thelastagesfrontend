@@ -1,6 +1,5 @@
 import React from "react";
 import Page from "./Page/Page";
-import actionBoard from "../Assets/playboard.png";
 
 function Privacy(){
     return(
@@ -9,8 +8,8 @@ function Privacy(){
             outer="outer-privacy"
             inner="inner-privacy"
         >
-            <h2>Privacy Policy for The Last Ages</h2>
-            <h3>Last Updated: 01-04-24</h3>
+            <h2>Privacy Policy for The Last Ages Mobile App</h2>
+            <h3>Last Updated: 10-26-24</h3>
 
             <h3>Information We Collect:</h3>
             <p>We do not collect personally identifiable information. The app only stores board game scores on the
