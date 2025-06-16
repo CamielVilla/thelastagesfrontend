@@ -4,22 +4,10 @@ import axios from "axios";
 import information from "../Assets/Spelinformatie.png";
 import Page from "./Page/Page";
 import YoutubeVideo from "../Components/YoutubeVideo/YoutubeVideo";
-import actionBoard from "../Assets/playboard.png";
-import mountains from "../Assets/mountains.png";
-import yellow from "../Assets/arab_yellow.png";
-import woman from "../Assets/arab_woman.png";
-import white from "../Assets/arab_white.png";
-import green from "../Assets/arab_green_2.png";
-import greenWoman from "../Assets/arab_green.png";
-import elfLord from "../Assets/elf_warlord.png";
-import earth from "../Assets/earth.png";
-import purple from "../Assets/arab_purple_2.png";
 import camiel from "../Assets/camiel-nieuw.png";
 import ruben from "../Assets/ruben-nieuw.png";
 import jasper from "../Assets/jasper-nieuw.png";
 import yuri from "../Assets/yuri-nieuw.png";
-import {Link} from "react-router-dom";
-import Navbar from "../Components/header/Navbar";
 
 function MainSite(){
     const {register, handleSubmit, formState: {errors}} = useForm();
