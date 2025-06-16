@@ -10,7 +10,7 @@ import Navbar from "./Components/header/Navbar";
 function App() {
     return (
         <HashRouter >
-            <Navbar />
+            {/*<Navbar />*/}
             <main>
                 <Routes>
                     <Route path="/" element={<MainSite />} />

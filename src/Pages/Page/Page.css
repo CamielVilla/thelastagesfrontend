@@ -88,6 +88,7 @@
 .team-images img{
     padding: 10px;
     height: 300px;
+    width: 300px;
 }
 
 .action-board{
@@ -166,6 +167,7 @@ img{
 
     .team-images img{
         height: 120px;
+        width: 120px;
     }
 
     .action-board{
@@ -173,8 +175,8 @@ img{
     }
 
     iframe{
-        width: 250px;
-        height: 250px;
+        width: 500px;
+        height: 400px;
     }
 }
 
