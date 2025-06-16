@@ -17,12 +17,24 @@ function MainSite(){
 
 
     async function handleFormSubmit(data){
+
+        const token = await window.grecaptcha.execute(
+            process.env.REACT_APP_RECAPTCHA_SITE_KEY,
+            { action: 'submit' }
+        );
+
+        console.log(token)
         try{
             setLoading(true);
             const response = await axios.post("https://thelastages.herokuapp.com/thelastages/addemail",{
                 emailAddress: data.email,
+                recaptchaToken: token,
             })
 
+            // const response = await axios.post("http://localhost:8080/thelastages/addemail",{
+            //     emailAddress: data.email,
+            //     recaptchaToken: token,
+            // })
 
             if (response.data){
                 toggleDuplicate(false);
